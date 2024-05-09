@@ -1,0 +1,93 @@
+
+body{
+    background-color: bisque;
+}
+
+.noto-sans-regular {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
+.chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.title-section{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#title{
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.increasing{
+    color:#00c703;
+}
+
+.reseting{
+    color:#111;
+}
+
+.decreasing{
+    color: #f22;
+}
+  
+.btn-section{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    justify-content: center;
+}
+
+.btn{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 7.5px 15px 7.5px 15px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:nth-of-type(1){
+    border: #f22 2px solid;
+}
+
+.btn:nth-of-type(2){
+    border: #111 2px solid;
+}
+
+.btn:nth-of-type(3){
+    border: #00c703 2px solid;
+}
+
+.btn:nth-of-type(1):hover{
+    background-color: #f22;
+    color: #fff;
+}
+
+.btn:nth-of-type(2):hover{
+    background-color: #111;
+    color: #fff;
+}
+
+.btn:nth-of-type(3):hover{
+    background-color: #00c703;
+    color: #fff;
+}
