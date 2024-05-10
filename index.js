@@ -6,14 +6,15 @@ let number = 0;
 let fruitsArray = ["🍉", "🍇", "🍓", "🫐", "🍒", "🍍", "🥥", "🥑", "🥕", "🍌", "🥝", "🍐"];
 
 
-
 decreaseButton.addEventListener("click", () => {
     number -= 1;
     if(number === 3 || (number % 3 == 0)){
-        randomFruit = fruitsArray[Math.floor(Math.random() * fruitsArray.length)];
-        document.querySelector("h2").textContent = randomFruit;
+        randomFruit = fruitsArray[Math.floor(Math.random() * fruitsArray.length)]
+        document.querySelector("h2").innerHTML = randomFruit;
     } else {
         document.querySelector("h2").innerHTML = number;
+        document.querySelector("h2").classList.remove("reseting");
+        document.querySelector("h2").classList.remove("increasing");
         document.querySelector("h2").classList.add("decreasing");
     }
 })
@@ -21,16 +22,20 @@ decreaseButton.addEventListener("click", () => {
 resetButton.addEventListener("click", () => {
     number = 0;
     document.querySelector("h2").innerHTML = number;
+    document.querySelector("h2").classList.remove("increasing");
+    document.querySelector("h2").classList.remove("decreasing");
     document.querySelector("h2").classList.add("reseting");
 })
 
 increaseButton.addEventListener("click", () => {
     number += 1;
     if(number === 3 || (number % 3 == 0)){
-        randomFruit = fruitsArray[Math.floor(Math.random() * fruitsArray.length)];
-        document.querySelector("h2").textContent = randomFruit;
+        randomFruit = fruitsArray[Math.floor(Math.random() * fruitsArray.length)]
+        document.querySelector("h2").innerHTML = randomFruit;
     } else {
         document.querySelector("h2").innerHTML = number;
+        document.querySelector("h2").classList.remove("decreasing");
+        document.querySelector("h2").classList.remove("reseting");
         document.querySelector("h2").classList.add("increasing");
     }
 })
